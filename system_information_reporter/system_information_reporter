@@ -1,0 +1,38 @@
+#/bin/bash
+echo "Welcome"
+echo "Press choose to continue:"
+echo "1. Username: "
+echo "2. Hostname: "
+echo "3. Kernel Verion: "
+echo "4. CPU Architecture"
+echo "5. UPTIME: "
+read -r enter
+a=$(whoami)
+b=$(hostname)
+c=$(uname -r)
+d=$(uname -m)
+e=$(uptime -p)
+
+case "$enter" in
+1)
+echo " "
+echo "Your Username: $a"
+;;
+2)
+echo " "
+echo "Your hostname is $b"
+;;
+3)
+echo " "
+echo "Your Kernel Version is $c"
+;;
+4)
+echo "Your CPU Architecture is $d"
+;;
+5)
+echo " "
+echo "Your Uptime is $e"
+;;
+*)
+echo "Invalid"
+esac
