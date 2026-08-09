@@ -1,0 +1,14 @@
+#!/bin/bash 
+echo "Welcome to DISK USAGE CHECKER"
+echo "==============================================="
+echo "Enter your directory to check: "
+read -r input
+b=$(locate $input)
+
+if [ -z "$b" ]; then 
+	echo "No directory" 
+fi
+
+echo $(df $b)
+
+
